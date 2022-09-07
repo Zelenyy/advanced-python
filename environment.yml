@@ -1,0 +1,16 @@
+name: scp-python
+dependencies:
+  - python=3.10
+  - virtualenv
+  - jupyter
+  - jupyterlab
+  - sphinx
+  - pylint
+  - pytest
+  - numpy
+  - scipy
+  - matplotlib
+  - pip
+  - pip:
+      - jupyterlite
+      - jupyterlab-drawio
