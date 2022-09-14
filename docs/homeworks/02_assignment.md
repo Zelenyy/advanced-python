@@ -1,26 +1,26 @@
 # Assignment 2 (12 p.)
 
-In this assignment you have to develop metadata processor for STEM Framework.
+In this assignment you have to develop a metadata processor for the STEM Framework.
 
-In STEM, task run include three stage:
+In the STEM, the task run includes three stage:
 
-1. Resolving of task dependencies and building task tree.
-2. Meta data verification: each task have `Specification` which describe required meta and meta data processor check input meta on accordance specification.
-3. Invocation of ech task.
+1. Resolving the task dependencies and building the task tree.
+2. Metadata verification: each task has `Specification` which describes required meta and the metadata processor checks input meta the correspondence to the specification.
+3. The invocation of each task.
 
-Meta is tree-like structure which on top level contains key-value pairs: key is string, value is primitive type, list or another Meta type. In STEM we will use dictionary and dataclass as Meta object.
+Meta is tree-like structure which contains key-value pairs on top level. The key is a string, the value is a primitive type, list or another Meta type. In the STEM we will use a dictionary and a dataclass as Meta objects.
 
-Specification is description of mandatory part metadata which must be present in Meta for given task and before execution task metadata processor checked what given meta complies specification. In STEM we will use dataclass class-object if dataclass using as Meta object and sequence of name-type pairs in another case.
+Specification is description of mandatory part of the metadata which must be present in the Meta for the given task. The metadata processor checks whether the given meta corresponds specification before the execution of the task. In the STEM we use dataclass class-object if the dataclass instance is used as the Meta object and sequence of name-type pairs otherwise.
 
-1. (1 p.) In `core.py` module create protocol `Dataclass` as type annotations for dataclass object.
-2. (1 p.) In `meta.py` module create type annotations for next type:
-   1. `Meta` --- union `dict` and `Dataclass` type.
+1. (1 p.) In `core.py` module create a protocol `Dataclass` as a type annotation for a dataclass object.
+2. (1 p.) In `meta.py` module create a type annotation for the next types:
+   1. `Meta` --- union of the `dict` and the `Dataclass` type.
    2. Specification field type `SpecificationField` --- pairs of necessary meta key and necessary meta value type (this can be single type, tuple of types, or another specification if meta value is another `Meta`)
-   3. `Specification` for specification --- union of `Dataclass` or tuple of `SpecifiationField` type.
-   Note: if necessary we can add additional type annotation 
+   3. `Specification` for specification --- union of the `Dataclass` or tuple of the `SpecifiationField` type.
+   Note: we can add additional type annotations if necessary. 
 3. (1 p.) In `meta.py` module implement function `get_meta_attr(meta : Meta, key : str, default : Optional[Any] = None) -> Optional[Any]:` which return meta value by `key` from top level of `meta` or `default` if `key` don't exist in `meta`.
 4. (1 p.) In `meta.py` module implement function `def update_meta(meta: Meta, **kwargs):` which update `meta` from `kwargs`.
-5. (6 p.) In `meta.py` module implement class `MetaVerification` --- this class contains result of meta verification, in field `errors` contains list of instance of dataclass  `MetaFieldError` or another `MetaVerification`:
-   1. Implement _property_ `checked_success`, return `True` if  not errors of verification.
+5. (6 p.) In `meta.py` module implement class `MetaVerification` --- this class contains result of meta verification. It contains list of instance of dataclass `MetaFieldError` or another `MetaVerification` in the field `errors`:
+   1. Implement _property_ `checked_success` that returns `True` if there is no errors of verification.
    2. Implement _staticmethod_ `def verify(meta: Meta, specification: Optional[Specification] = None) -> "MetaVerification":` which verify `meta` by `specification`. Raise `SpecificationError` if verification impossible.
-6. (2 p.) In `core.py` module implement class `Named` with _property_ `name`: this property return value of private variable `_name` if it is not None and return name of current class (Named or his children) in snake_case (for translation classname from PascalCase to snake_case implement `def pascal_case_to_snake_case(name: str) -> str:` function)
+6. (2 p.) In `core.py` module implement class `Named` with _property_ `name`. This property returns value of private variable `_name` if it is not None and returns name of current class (`Named` or his children) in snake_case (for translation classname from PascalCase to snake_case implement `def pascal_case_to_snake_case(name: str) -> str:` function).
