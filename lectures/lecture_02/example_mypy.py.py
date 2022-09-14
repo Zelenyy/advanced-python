@@ -1,1 +1,0 @@
-../../materials/example_mypy.py.py
