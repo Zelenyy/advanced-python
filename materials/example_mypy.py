@@ -28,3 +28,8 @@ if __name__ == '__main__':
     greeting_2(3)
     greeting_2("Name")
     greeting_2(b"aasdfsda")
+
+    a = greeting_2("Name")
+    greeting_2(a)
+    a = 1
+    greeting_2(a)
