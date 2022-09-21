@@ -1,6 +1,7 @@
 alabaster==0.7.12
 argon2-cffi==21.3.0
 argon2-cffi-bindings==21.2.0
+asgiref==3.5.2
 astroid==2.12.9
 asttokens==2.0.8
 attrs==22.1.0
@@ -17,6 +18,7 @@ decorator==5.1.1
 defusedxml==0.7.1
 dill==0.3.5.1
 distlib==0.3.6
+Django==4.1.1
 docutils==0.19
 entrypoints==0.4
 executing==1.0.0
@@ -86,7 +88,7 @@ Send2Trash==1.8.0
 six==1.16.0
 snowballstemmer==2.2.0
 soupsieve==2.3.2.post1
--e git+https://github.com/Zelenyy/advanced-python.git@4a0f6e187dd755f771101b0ae747c80ff39d6c73#egg=spc&subdirectory=materials/example_project
+-e git+https://github.com/Zelenyy/advanced-python.git@31e29d3b66edfef19b2ac44ec5ea94b65de5c452#egg=spc&subdirectory=materials/example_project
 Sphinx==5.1.1
 sphinxcontrib-applehelp==1.0.2
 sphinxcontrib-devhelp==1.0.2
@@ -94,7 +96,9 @@ sphinxcontrib-htmlhelp==2.0.0
 sphinxcontrib-jsmath==1.0.1
 sphinxcontrib-qthelp==1.0.3
 sphinxcontrib-serializinghtml==1.1.5
+sqlparse==0.4.2
 stack-data==0.5.0
+-e git+https://github.com/pklimai/MZ-python-hw.git@7b2276ee5306f8070a1634e897c4f439ccb700fe#egg=stem_framework&subdirectory=stem_framework
 terminado==0.15.0
 tinycss2==1.1.1
 tomli==2.0.1

@@ -1,0 +1,10 @@
+# Assignment 3 (8 p.)
+
+In this assignment you have to implement API for STEM task creation.
+
+
+1. (2 p.) In `task.py` module implement decorator `data(func: Callable[[Meta], T], specification: Optional[Specification] = None, **settings) -> FunctionDataTask[T]` which wrap user function as `FunctionDataTask` object. Name of wrapped function and wrapped function have to forward as `name` and `func` arguments  of the `FunctionDataTask` constructor. Argument `specification` and keyword arguments `settings` have to forward as `specification` and `settings` arguments of the `FunctionDataTask` constructor. Decorator can be applied as `@data` and as `@data(...)`.
+2. (3 p.) In `task.py` module implement decorator `task(func: Callable[[Meta, ...], T], specification: Optional[Specification] = None, **settings) -> FunctionTask[T]` which wrap user function as `FunctionTask` object. Name of wrapped function and wrapped function have to forward as `name` and `func` arguments  of the `FunctionTask` constructor. Names of arguments of wrapped function (exclude argument `meta`) have to forward as `dependencies` argument (as `tuple` of `str`) of the `FunctionTask` constructor. Argument `specification` and keyword arguments `settings` have to forward as `specification` and `settings` arguments of the `FunctionTask` constructor. Decorator can be applied as `@task` and as `@task(...)`.
+3. (1 p.) In `task.py` module implement class `MapTask` which apply `func` for each element of the iterated dependence. Property `name` have to return the name of the dependence with the prefix `"map_"`.
+4. (1 p.) In `task.py` module implement class `FilterTask` which filter iterated dependence using `key` function. Property `name` have to return the name of the dependence with the prefix `"filter_"`.
+5. (1 p.) In `task.py` module implement class `ReduceTask` which reduce iterated dependence using `func` function. Property `name` have to return the name of the dependence with the prefix `"reduce_"`.
