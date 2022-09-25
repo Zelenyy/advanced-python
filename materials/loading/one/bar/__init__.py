@@ -1,0 +1,3 @@
+print("bar")
+
+VARIABLE = "VARIABLE"
