@@ -1,4 +1,4 @@
-from files.general_overview.loading.bar import bar
+from .bar import bar
 
 
 class B:

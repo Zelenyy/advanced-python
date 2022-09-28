@@ -1,8 +1,11 @@
+from .foo import B
+
 
 class A:
     def __init__(self):
-        from files.general_overview.loading.foo import B
+        from .foo import B
         self.b = B()
+
 
 def bar():
     pass
