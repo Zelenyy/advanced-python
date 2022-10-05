@@ -8,4 +8,12 @@ setup(
         "matplotlib",
         "numpy"
     ],
+    entry_points={
+        "console_scripts": [
+            "secure-contain-project = spc.run:run_print"
+        ],
+        "gui_scripts": [
+            "secure-contain-project-gui = sdp.run:run_print"
+        ]
+    }
 )

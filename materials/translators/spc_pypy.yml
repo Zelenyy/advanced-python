@@ -1,0 +1,7 @@
+name: spc-pypy
+channels:
+  - conda-forge
+dependencies:
+  - pypy
+  - python=3.7
+  - numpy
