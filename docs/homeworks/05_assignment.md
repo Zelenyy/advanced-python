@@ -1,4 +1,4 @@
-# Assignment 5 (16 p.)
+# Assignment 5 (16 (19) p.)
 
 In this assignment you finish core part of the STEM. you have to unite all previous part and implement system of task execution.
 
@@ -73,3 +73,4 @@ options:
   -m META, --meta META  Metadata for task or path to file with metadata in JSON format
 ```
 5. (1 p.) Using `setup.py` (or `toml` file) create console script for call `stem.cli_main:stem_cli_main` function.
+6. (3* p.) (Optional task, for additional point) Add function for output task tree graph in image.
