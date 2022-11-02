@@ -1,0 +1,12 @@
+name: sciprog
+dependencies:
+  - python=3.9
+  - numpy
+  - scipy
+  - plot
+  - jupyter
+  - jupyterlab
+  - pip
+  - pip:
+      - jupyterlite
+      - jupyterlab-drawio
