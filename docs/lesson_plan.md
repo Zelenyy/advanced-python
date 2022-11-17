@@ -72,7 +72,7 @@
 11. Сетевое программирование и WEB (II)
     1. Асинхронный сервер с asyncio (30 минут)
     2. Построение графиков с plotly и bokeh (40 минут)
-    3. WEB-фреймворки: Tornado, Flask, Django, aiohttp (20 минут)
+    3. WEB-фреймворки: Tornado, Flask, Django, aiohttp, FastAPI (20 минут)
 12. Graphical User Interface (GUI) (90 минут)
     1. Создание графических приложений с tkinter и PySide (PyQt)
     2. Events, signal and slots. Observable property.
