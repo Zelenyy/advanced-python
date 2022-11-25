@@ -1,0 +1,5 @@
+# Assignment 13 (8 p.)
+
+In this assignment you continue to develop of STEM: Serious TEmperature Monitor --- application with GUI, which allow measure temperature using USB thermometer, save results in database and present graph of the temperature.
+
+1. (6+2 p.) In the module `app.py` implement the class `Oscilloscope(QWidget)` with view two graph: line plot with dependency temperature from time and histogram of measured temperature values. Connect oscilloscope to `ThermometerController` and update graph on every new measurement (ranges of y-axis must be setup dynamically) (6 p.). Line plot must be view data from last `Oscilloscope.N` points (ranges of x-axis of line plot must be setup dynamically). For every graph add axis labels, plot grid and secondary Y axis on right side of graphs (2 p.). Add oscilloscope widget to central windget of application.

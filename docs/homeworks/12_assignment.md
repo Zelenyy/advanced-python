@@ -1,3 +1,11 @@
-# Assignment 12 ( p.)
+# Assignment 12 (12 p.)
 
-In this assignment you start develop of STEM: Super TEmperature Monitor --- application with GUI, which allow 
+In this assignment you start develop of STEM: Serious TEmperature Monitor --- application with GUI, which allow measure temperature using USB thermometer, save results in database and present graph of the temperature.
+
+1. (1 p.) Add supportion on `with`-context in the class `device.Thermometer`. On enter in context must be call `open` method, on exit `close` method.
+2. (2 p.) In the module `app.py` implement the class `RunButton(QPushButton)` which represent a push button with two state `Run` and `Stop`. Click on the button change state. In state `Run` button must be have label `Run` and set background color to green. In state `Stop` button must be have label `Stop` and set background color to red. Information of change state write as debug message to `logging.root` logger.
+3. (2 p.) In the module `controller.py` implement the class `ThermometerController(QObject)` which using method `start`\\`stop` turn on\off data collection from `device: Thermometer`. After call of `start` method this class begin periodically (with period `config.period`, using itself timer of `QObject`) requests of data at the device and emit getting value to signal `measurment`. `stop` method stop its timer. Also `start` method pass debug message with temperature value to `logging.root` logger.
+4. (2 p.) In the module `app.py` implement the class `Central(QWidget)` which must be used as central widget of main window. Add on this widget button from first task. Connect `controller : ThermometerController` to button click: click in state `Run` run `controller.start`, click in state `Stop` run `controller.stop`. 
+5. (2 p.) In the module `app.py` implement the class `Main(QMainWindow)` which represent main window of application. In this class setup window title `"Serious TEmperature Monitor"`, add widget from previous task as central widget. Also using `QSettings` save last window size on exit and restore his by next run. 
+6. (2 p.) Add to main window from previous task a dock widget (QDockWidget), which contain text output (QTextEditor). Connect this text output with `logging.root` logger (using `LoggerHandler`). Add to main window toolbar action which hide/show this dock.
+7. (1 p.) In the module `app.py` implement the `run` method and create in `setup.py/.toml` entry point for run this method as console script.
