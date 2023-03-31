@@ -10,6 +10,7 @@ class RectangularTest(TestCase):
     WIDTH = 50
 
     def setUp(self) -> None:
+        print("a")
         self.rect = Rectangular(self.HEIGHT, self.WIDTH)
 
     def test_area(self):

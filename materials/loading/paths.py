@@ -1,5 +1,7 @@
 from pathlib import Path
 
+print(__name__)
+
 
 FILE_PATH = Path(__file__)
 PACKAGE_PATH = FILE_PATH.absolute().parent

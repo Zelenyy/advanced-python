@@ -26,7 +26,7 @@ if __name__ == '__main__':
     greeting_1("Name")
 
     greeting_2(3)
-    greeting_2("Name")
+    a = greeting_2("Name")
     greeting_2(b"aasdfsda")
 
     a = greeting_2("Name")
